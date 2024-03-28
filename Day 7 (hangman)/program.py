@@ -5,7 +5,6 @@ word_list = assets.word_list
 chosen_word = random.choice(word_list)
 game_over = False
 lives = 6
-print(chosen_word)
 
 display_word_characters = []
 for i in range (0, len(chosen_word)):
