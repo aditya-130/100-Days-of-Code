@@ -52,7 +52,7 @@ def play_game():
     if user_score == 0 or computer_score == 0 or user_score > 21:
       is_game_over = True
     else:
-      user_should_deal = input("Type 'y' to get another card, type 'n' to pass: ")
+      user_should_deal = input("Type 'y' to get another card, type 'n' to pass: ").lower()
       if user_should_deal == "y":
         user_cards.append(deal_card())
       else:
@@ -65,6 +65,6 @@ def play_game():
   print(f"   Computer's final hand: {computer_cards}, final score: {computer_score}")
   print(compare(user_score, computer_score))
 
-while input("Do you want to play a game of Blackjack? Type 'y' or 'n': ") == "y":
+while input("Do you want to play a game of Blackjack? Type 'y' or 'n': ").lower() == "y":
   clear()
   play_game()
